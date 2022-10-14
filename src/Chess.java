@@ -10,7 +10,7 @@ public class Chess {
     public void play() {
         while (true) {
             createPlayers();
-            /*
+
             initialiseBoard();
             while (!isCheckMate()) {
                 printBoard();
@@ -21,19 +21,18 @@ public class Chess {
                 while (!isValideMove(move));
                 updateBoard(move);
                 switchPlayer();
-            }*/
+            }
         }
     }
 
     private void createPlayers() {
         System.out.println("Création du joueur 1 : blanc");
+        players[0] = new Player("Joueur 1", 0);
 
-        name, color = "5", 5;
-        players["player1"] = new Player(name, 0);
+        System.out.println("Création du joueur 2 : noir");
+        players[1] = new Player("Joueur 2", 1);
 
-        System.out.println("creation Players2");
-
-        System.out.println("currentPlayer = Player1");
+        currentPlayer = players[0];
     }
 
     private void initialiseBoard() {
